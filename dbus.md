@@ -11,8 +11,8 @@
 * Do not create a tree structure or object hierarchy to represent relationships/associations between objects, use object properties on objects to form associations
 * When an object is removed and you emit the signal InferfacesRemoved, you provide the object path and an array of all interfaces the object supported.
 * For InterfacesRemoved and for GetManagedObjects you need not include the standard interfaces, ref. http://lists.freedesktop.org/archives/dbus/2015-March/016626.html
-* Always make new objects are available before you put object path in a
-signal, or return their object path from a method.
+* Always make sure new objects are available before you put the object path in a
+signal, or return the object path from a method.
 
 
 ### Maintaining backwards compatibility
