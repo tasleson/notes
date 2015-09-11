@@ -13,6 +13,7 @@
 * For InterfacesRemoved and for GetManagedObjects you need not include the standard interfaces, ref. http://lists.freedesktop.org/archives/dbus/2015-March/016626.html
 * Always make sure new objects are available before you put the object path in a
 signal, or return the object path from a method.
+* Object paths are opaque and should not contain any information about the object itself.  It's merely a pointer to an object.  Avoid using properties of the object or anything a user could possible change which would effect the object path.
 
 
 ### Maintaining backwards compatibility
