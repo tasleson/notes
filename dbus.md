@@ -34,3 +34,4 @@ signal, or return the object path from a method.
 * More
     * http://0pointer.de/blog/projects/versioning-dbus.html
     * https://developer.gnome.org/gio/stable/gdbus-codegen.html#gdbus-code-stability
+    * http://dbus.freedesktop.org/doc/dbus-api-design.html
