@@ -10,8 +10,10 @@
    * https://bugs.launchpad.net/cinder/+bug/1470218
  * Reporting errors is limited to exit values and stderr messages which many users simply ignore.  
    * Actual code ( openstack nova[1] ): 
-   * cmd = ('lvcreate', '-L', '%db' % size, '-n', lv, vg) 
-   * execute(*cmd, run_as_root=True, attempts=3)
+   ```python
+   cmd = ('lvcreate', '-L', '%db' % size, '-n', lv, vg) 
+   execute(*cmd, run_as_root=True, attempts=3)
+   ```
    * OpenStack/Cinder has numerious error paths which retry operations.  Some error paths call into udev settle to work around suspected race conditions with udev handling
    * If all you offer is an exit code of 0 or 1, it forces a user to check every possible precondition, some of which the user may not possibly know, thus they may be forced to look at stderr for error context
  * Command line wrappers either have to pass configuration options on the command line or use a separate config file to insulate themselves from changes to main lvm.conf file.
